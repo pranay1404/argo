@@ -19,7 +19,7 @@ spec:
         extraArgs:
         - --kubelet-insecure-tls=true
         # Values specific to the Metrics Server Helm chart
-        replicas: 2
+        replicas: 1
         resources:
           requests:
             memory: "100Mi"  # Set resource requests as needed

@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: root-app
-  namespace: argocd
+  namespace: argo
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -14,3 +14,6 @@ spec:
     path: apps
     repoURL: https://github.com/pranay1404/argo.git
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
